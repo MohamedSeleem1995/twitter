@@ -36,6 +36,21 @@ header {
     background-color: #1da1f2;
     width: 170px;
 }
+.navbar ul li {
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.navbar ul li:hover {
+    background-color: rgb(17, 17, 17);
+}
 /* End Header */
 /* Start First Section */
 div > img {
@@ -79,6 +94,21 @@ input:focus::placeholder {
 .heading-icons > div + a {
     width: 80px;
 }
+:is(.post1,
+.post2, .post3) {
+    position: relative;
+}
+.post1::before,
+.post2:before, .post3::before {
+    position: absolute;
+    content: "\f141";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    right: 15px;
+    top: 30px;
+    color: #2e2d2d;
+    font-size: 18px;
+}
 @media (max-width: 30rem) {
     .heading-info input {
         text-align: center;
@@ -107,6 +137,10 @@ p {
 
 input[type="search"] {
     padding: 10px 20px;
+    height: 2.6875rem;
+}
+input[type="search"]:focus {
+    border: 1px solid #1da1f2;
 }
 :is(.trend-section-info,
 input[type="search"],
